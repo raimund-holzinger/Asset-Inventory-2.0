@@ -16,12 +16,6 @@ namespace AssetManagementApp.Controllers
     public class DnsRecordsController : Controller
     {
         private readonly DnsRecordDbContext _context;
-        private IHostingEnvironment Environment;
-        
-        public DnsRecordsController(IHostingEnvironment _environment)
-        {
-            Environment = _environment;
-        }
 
         public DnsRecordsController(DnsRecordDbContext context)
         {
