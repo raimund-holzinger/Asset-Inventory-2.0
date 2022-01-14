@@ -1,0 +1,275 @@
+﻿@using System.Configuration
+
+@{
+    @*var env = ConfigurationManager.AppSettings["Environment"];
+    string envTitle;
+    switch (env)
+    {
+        case "PROD":
+            envTitle = string.Empty;
+            break;
+
+        case "TEST":
+            envTitle = "Testsystem";
+            break;
+
+        case "DEV":
+        default:
+            envTitle = "Entwicklungssystem";
+            break;
+    }*@
+    Random rdn = new Random();
+
+    var pageVersion = rdn.Next();
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AssetManagementApp</title>
+
+
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/main.css" />
+        <link rel="stylesheet" href="~/css/*.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <div id="header" class="page-navbar">
+        <!-- .navbar-brand -->
+        <a href="@Url.Action("Index", "Home")" class="navbar-brand hidden-xs hidden-sm">
+            <img src="@Url.Content("~/images/logo.png")" class="logo hidden-xs" alt="Nestlé DTS - AssetManagementApp">
+            <img src="@Url.Content("~/images/logosm.png")" class="logo-sm hidden-lg hidden-md" alt="Nestlé DTS - AssetManagementApp">
+        </a>
+        <!-- / navbar-brand -->
+        <!-- .no-collapse -->
+        <div id="navbar-no-collapse" class="navbar-no-collapse">
+            <!-- top left nav -->
+            <ul class="nav navbar-nav">
+                <li class="toggle-sidebar">
+                    <a href="#">
+                        <i class="fa fa-reorder"></i>
+                        <span class="sr-only">Collapse sidebar</span>
+                    </a>
+                </li>
+                <li style="padding-top: 8px;">
+                    <h4 id="PageTitle">@ViewBag.Title</h4>
+                </li>
+            </ul>
+            <!-- / top left nav -->
+            <!-- top right nav -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div style="color: red; margin-top: 15px; margin-right: 30px;">Staging</div>
+
+                </li>
+            </ul>
+            <!-- / top right nav -->
+        </div>
+        <!-- / collapse -->
+    </div>
+    <!-- / page-navbar -->
+    <!-- #wrapper -->
+    <div id="wrapper">
+        <!-- .page-sidebar -->
+        <aside id="sidebar" class="page-sidebar hidden-md hidden-sm hidden-xs">
+            <!-- Start .sidebar-inner -->
+            <div class="sidebar-inner">
+                <!-- Start .sidebar-scrollarea -->
+                <div class="sidebar-scrollarea">
+                    <!--  .sidebar-panel -->
+                    <div class="sidebar-panel">
+                        <h5 class="sidebar-panel-title">Willkommen</h5>
+                    </div>
+                    <!-- / .sidebar-panel -->
+                    <div class="user-info clearfix">
+                        <img src="@Url.Content("~/images/employees/minion.jpg")" alt="avatar">
+                        <span class="name">@User.Identity.Name </span>
+                        <div class="btn-group">
+                        </div>
+                    </div>
+                    <!--  .sidebar-panel -->
+                    <div class="sidebar-panel">
+                        <h5 class="sidebar-panel-title">Menü</h5>
+                    </div>
+                    <!-- / .sidebar-panel -->
+                    <!-- .side-nav -->
+                    <div class="side-nav">
+                        <ul class="nav">
+                            <li>
+                                <a href="@Url.Action("Index", "Home")"><span class="txt">Home</span></a>
+                                <a href="@Url.Action("Index", "DnsRecords")"><span class="txt">DNS-Checkup</span></a>
+                            </li>
+                            @*@if (Session.CanReview())
+                            {
+                                <li>
+                                    <a href="@Url.Action("Index", "Review")"><i class="l-arrows-square-check"></i><span class="txt">Monatsreview</span></a>
+                                </li>
+                            }
+                            <li>
+                                <a href="@Url.Action("Index", "WorkItem")"><i class="l-basic-webpage"></i><span class="txt">Zeiterfassung</span></a>
+                            </li>
+                            <li class="hide">
+                                <a href="@Url.Action("Absence", "Planner")"><i class="l-basic-webpage"></i><span class="txt">Abwesenheitsplanung</span></a>
+                            </li>
+
+                            <li>
+                                <a href="@Url.Action("Index", "Project")"><i class="l-ecommerce-graph1"></i> <span class="txt">Projekte</span></a>
+                                <ul class="sub">
+                                    <li>
+                                        <a href="@Url.Action("Index", "Project")"><span class="txt">Übersicht</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Mine", "Project")"><span class="txt">Meine</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Favorites", "Project")"><span class="txt">Favoriten</span></a>
+                                    </li>
+                                </ul>
+                            </li> *@
+
+                            @*
+                            @if (Session.IsAdmin())
+                            {
+                                <li>
+                                    <a href="#"><i class="l-software-layers2"></i><span class="txt">Administration</span></a>
+                                    <ul class="sub">
+                                        <li>
+                                            <a href="@Url.Action("Index", "Employee")"><span class="txt">Mitarbeiter</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "BusinessArea")"><span class="txt">Operativen</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "DefaultHourRate")"><span class="txt">Stundens&auml;tze</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Manage", "Review")"><span class="txt">Monatsreview</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Manage", "Announcement")"><span class="txt">iTAB News</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("FieldEditor", "Administration")"><span class="txt">Field Editor</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#"><i class="l-basic-mail"></i> <span class="txt">Berichte</span></a>
+                                    <ul class="sub">
+                                        <li>
+                                            <a href="@Url.Action("Index", "Report", new { name = "EmployeeVacation" })"><span class="txt">Abwesenheitsbericht</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Report", new { name = "ExternalMaintenance" })"><span class="txt">Maintenance Externe</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Report", new { name = "BusinessAreaMaintenance" })"><span class="txt">Operativenverbrauch</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Report", new { name = "EmployeeExpenditure" })"><span class="txt">Mitarbeiterbetr&auml;ge</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Report", new { name = "Invoicing" })"><span class="txt">Rechnungsbetr&auml;ge</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Report", new { name = "Capacity" })"><span class="txt">Auslastung Projekte</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Report", new { name = "ProjectBudgetDifference" })"><span class="txt">Projekt-&Uuml;berhang</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Report", new { name = "ProjectBudget" })"><span class="txt">Projekt-Aufw&auml;nde Operativen</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            } *@
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- End .sidebar-scrollarea -->
+
+            </div>
+            <!-- End .sidebar-inner -->
+        </aside>
+
+        <!-- End #right-sidebar -->
+        <!-- .page-content -->
+        <div class="page-content sidebar-page clearfix">
+            <!-- .page-content-wrapper -->
+            <div class="page-content-wrapper">
+                <div class="page-content-inner">
+                    <!-- Start .page-content-inner -->
+                    <div id="page-header" class="clearfix hide">
+                        <div class="page-header">
+                            <h2>@ViewBag.Title</h2>
+                        </div>
+                    </div>
+                    <!-- Start .row -->
+                    <div class="row" style="margin-right: 2px;">
+                        @RenderBody()
+                    </div>
+                    <!-- End .row -->
+                </div>
+                <!-- End .page-content-inner -->
+            </div>
+            <!-- / page-content-wrapper -->
+        </div>
+        <!-- / page-content -->
+    </div>
+    <!-- / #wrapper -->
+    <!-- End #footer  -->
+    <!-- Back to top -->
+    <div id="back-to-top">
+        <a href="#">Back to Top</a>
+    </div>
+
+    @*<partial name="_CookieConsentPartial" />*@
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2022 - AssetManagementApp</p>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

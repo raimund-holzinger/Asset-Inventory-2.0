@@ -1,0 +1,126 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\bootstrap-theme.css" />
+    <None Include="wwwroot\css\bootstrap-theme.css.map" />
+    <None Include="wwwroot\css\bootstrap-theme.min.css" />
+    <None Include="wwwroot\css\bootstrap-theme.min.css.map" />
+    <None Include="wwwroot\css\bootstrap.css" />
+    <None Include="wwwroot\css\bootstrap.css.map" />
+    <None Include="wwwroot\css\bootstrap.min.css" />
+    <None Include="wwwroot\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\css\foxyTheme.css" />
+    <None Include="wwwroot\css\icons.css" />
+    <None Include="wwwroot\css\iTabMvc.css" />
+    <None Include="wwwroot\css\main.css" />
+    <None Include="wwwroot\css\plugins.css" />
+    <None Include="wwwroot\images\avatars\1.jpg" />
+    <None Include="wwwroot\images\avatars\10.jpg" />
+    <None Include="wwwroot\images\avatars\11.jpg" />
+    <None Include="wwwroot\images\avatars\128.jpg" />
+    <None Include="wwwroot\images\avatars\2.jpg" />
+    <None Include="wwwroot\images\avatars\3.jpg" />
+    <None Include="wwwroot\images\avatars\4.jpg" />
+    <None Include="wwwroot\images\avatars\5.jpg" />
+    <None Include="wwwroot\images\avatars\6.jpg" />
+    <None Include="wwwroot\images\avatars\7.jpg" />
+    <None Include="wwwroot\images\avatars\8.jpg" />
+    <None Include="wwwroot\images\avatars\9.jpg" />
+    <None Include="wwwroot\images\backtop.png" />
+    <None Include="wwwroot\images\bootstrap-colorpicker\alpha-horizontal.png" />
+    <None Include="wwwroot\images\bootstrap-colorpicker\alpha.png" />
+    <None Include="wwwroot\images\bootstrap-colorpicker\hue-horizontal.png" />
+    <None Include="wwwroot\images\bootstrap-colorpicker\hue.png" />
+    <None Include="wwwroot\images\bootstrap-colorpicker\saturation.png" />
+    <None Include="wwwroot\images\carousel\1.jpg" />
+    <None Include="wwwroot\images\carousel\2.jpg" />
+    <None Include="wwwroot\images\carousel\3.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\1.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\10.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\11.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\12.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\2.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\3.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\4.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\5.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\6.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\7.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\8.jpg" />
+    <None Include="wwwroot\images\carousel\gallery\9.jpg" />
+    <None Include="wwwroot\images\employees\dealexandi.jpg" />
+    <None Include="wwwroot\images\employees\debahnsech.jpg" />
+    <None Include="wwwroot\images\employees\debeckerwl.jpg" />
+    <None Include="wwwroot\images\employees\debelkeju.JPG" />
+    <None Include="wwwroot\images\employees\debirnbana.jpg" />
+    <None Include="wwwroot\images\employees\deboosssv.jpg" />
+    <None Include="wwwroot\images\employees\debraunwo.jpg" />
+    <None Include="wwwroot\images\employees\dedienerst.jpg" />
+    <None Include="wwwroot\images\employees\dedonnerfe.jpg" />
+    <None Include="wwwroot\images\employees\defreyth.JPG" />
+    <None Include="wwwroot\images\employees\degehmpa.jpg" />
+    <None Include="wwwroot\images\employees\dehelmusso.jpg" />
+    <None Include="wwwroot\images\employees\dehiddesto.jpg" />
+    <None Include="wwwroot\images\employees\dehirschla.jpg" />
+    <None Include="wwwroot\images\employees\dejagtapyo.jpg" />
+    <None Include="wwwroot\images\employees\dejunkerni.jpg" />
+    <None Include="wwwroot\images\employees\dekettneth.jpg" />
+    <None Include="wwwroot\images\employees\deklasseal.jpg" />
+    <None Include="wwwroot\images\employees\delish.jpg" />
+    <None Include="wwwroot\images\employees\demehrinma.jpg" />
+    <None Include="wwwroot\images\employees\demetzan1.jpg" />
+    <None Include="wwwroot\images\employees\demilasju.jpg" />
+    <None Include="wwwroot\images\employees\demoritzr1.jpg" />
+    <None Include="wwwroot\images\employees\depetrovar.JPG" />
+    <None Include="wwwroot\images\employees\derebeniti.jpg" />
+    <None Include="wwwroot\images\employees\derothsa1.jpg" />
+    <None Include="wwwroot\images\employees\deschaefsi.jpg" />
+    <None Include="wwwroot\images\employees\deschmidma2.jpg" />
+    <None Include="wwwroot\images\employees\deschulzfr.jpg" />
+    <None Include="wwwroot\images\employees\deschulzsa.jpg" />
+    <None Include="wwwroot\images\employees\desteffemi.jpg" />
+    <None Include="wwwroot\images\employees\destrohmm1.jpg" />
+    <None Include="wwwroot\images\employees\detariqom.JPG" />
+    <None Include="wwwroot\images\employees\dewepiwegi.jpg" />
+    <None Include="wwwroot\images\employees\dezemannma.JPG" />
+    <None Include="wwwroot\images\employees\minion.jpg" />
+    <None Include="wwwroot\images\excel.png" />
+    <None Include="wwwroot\images\ico\apple-touch-icon-114-precomposed.png" />
+    <None Include="wwwroot\images\ico\apple-touch-icon-144-precomposed.png" />
+    <None Include="wwwroot\images\ico\apple-touch-icon-57-precomposed.png" />
+    <None Include="wwwroot\images\ico\apple-touch-icon-72-precomposed.png" />
+    <None Include="wwwroot\images\ico\favicon.ico" />
+    <None Include="wwwroot\images\ico\if_f057_213016.png" />
+    <None Include="wwwroot\images\ico\if_f060_213024.png" />
+    <None Include="wwwroot\images\ico\if_square-add_226562.png" />
+    <None Include="wwwroot\images\logo-dark.png" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\logosm.png" />
+    <None Include="wwwroot\images\pr-plan-scale.png" />
+    <None Include="wwwroot\images\spritemap%402x.png" />
+    <None Include="wwwroot\images\spritemap.png" />
+    <None Include="wwwroot\images\thumbs-up.jpg" />
+    <None Include="wwwroot\images\weather\clear.png" />
+    <None Include="wwwroot\images\weather\cloud.png" />
+    <None Include="wwwroot\images\weather\rain.png" />
+    <None Include="wwwroot\images\weather\snow.png" />
+    <None Include="wwwroot\images\weather\sunny.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="27.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\DnsRecords\Import.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+</Project>

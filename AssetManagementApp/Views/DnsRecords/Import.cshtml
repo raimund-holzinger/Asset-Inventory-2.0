@@ -1,0 +1,33 @@
+﻿@model AssetManagementApp.Models.DomainList
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Data;
+
+@{
+    ViewData["Title"] = "Import";
+}
+
+<h2>Import</h2>
+
+<h4>DnsRecord</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="DnsRecords" asp-action="Import" method="post" enctype="multipart/form-data">
+            <input type="file" name="postedFile" />
+            <input type="submit" value="Import" />
+        </form>
+        @if (Model != null)
+    {
+        <hr />
+       
+    }
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
